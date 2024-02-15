@@ -1,5 +1,5 @@
 // #region Imports
-import { Pokemon } from "./main";
+import { Pokemon } from "./main.js";
 // #endregion
 
 // #region Pokemons
@@ -51,38 +51,38 @@ megaCharizardX.id_logros = 33;
 
 // #region sunkern
 sunkern.id = 'sunkern';
-sunkern.vida = 30;
-sunkern.ataque = 30;
-sunkern.defensa = 30;
-sunkern.ataque_especial = 30;
-sunkern.defensa_especial = 30;
-sunkern.velocidad = 30;
+sunkern.HP = 30;
+sunkern.Atk = 30;
+sunkern.Def = 30;
+sunkern.SpA = 30;
+sunkern.SpD = 30;
+sunkern.Spe = 30;
 sunkern.id_team = '1';
-sunkern.id_logros = '2';
+sunkern.id_logros = 2;
 // #endregion
 
 // #region megaMewtwoX
 megaMewtwoX.id = 'megaMewtwoX';
-megaMewtwoX.vida = 106;
-megaMewtwoX.ataque = 190;
-megaMewtwoX.defensa = 100;
-megaMewtwoX.ataque_especial = 154;
-megaMewtwoX.defensa_especial = 100;
-megaMewtwoX.velocidad = 130;
+megaMewtwoX.HP = 106;
+megaMewtwoX.Atk = 190;
+megaMewtwoX.Def = 100;
+megaMewtwoX.SpA = 154;
+megaMewtwoX.SpD = 100;
+megaMewtwoX.Spe = 130;
 megaMewtwoX.id_team = '1';
-megaMewtwoX.id_logros = '2';
+megaMewtwoX.id_logros = 2;
 // #endregion
 
 // #region greninjaAsh
 greninjaAsh.id = 'greninjaAsh';
-greninjaAsh.vida = 72;
-greninjaAsh.ataque = 145;
-greninjaAsh.defensa = 67;
-greninjaAsh.ataque_especial = 153;
-greninjaAsh.defensa_especial = 71;
-greninjaAsh.velocidad = 132;
+greninjaAsh.HP = 72;
+greninjaAsh.Atk = 145;
+greninjaAsh.Def = 67;
+greninjaAsh.SpA = 153;
+greninjaAsh.SpD = 71;
+greninjaAsh.Spe = 132;
 greninjaAsh.id_team = '1';
-greninjaAsh.id_logros = '2';
+greninjaAsh.id_logros = 2;
 // #endregion
 
 // #endregion
@@ -95,5 +95,3 @@ export { greninjaAsh }
 export { sunkern }
 export { megaMewtwoX }
 // #endregion
-
-
