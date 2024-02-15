@@ -27,7 +27,7 @@ export function PowerUp() {
 export function Move() {
     this.id = 0;
     this.description = "";
-    this.effect = "";
+    this.effect  = "";
 }
 // #endregion
 
@@ -57,7 +57,7 @@ allMoves = [flamethrower, bodySlam, suckerPunch];
 function batalla(OffensivePokemon, DefensivePokemon) {
 
     let resultatD6 = d6;
-    chosenPowerUp = allPowerUps[resultatD6] //Escollir el tipus de poder up que li toca al jugador
+    chosenPowerUp = allPowerUps[resultatD6] //Escollir el tipus de PowerUp que li toca al jugador
     console.log(chosenPowerUp);
     switch (chosenPowerUp.stat) {
         case "Hp":
@@ -91,7 +91,8 @@ function batalla(OffensivePokemon, DefensivePokemon) {
 
     let resultatD3 = d3;
     chosenMove = allMoves[resultatD3];
-    console.log(chosenMove);
+    let residuo = chosenMove.effect(OffensivePokemon, DefensivePokemon);
+    console.log(residuo);
 
 
 
