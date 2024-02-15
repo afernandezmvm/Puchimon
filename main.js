@@ -52,8 +52,8 @@ function d3() {
     return number;
 }
 // #endregion
-allPowerUps = [cottonGuard, swordsDance, doubleTeam, intimidate, ironDefense];
-allMoves = [flamethrower, bodySlam, suckerPunch];
+var allPowerUps = [cottonGuard, swordsDance, doubleTeam, intimidate, ironDefense];
+var allMoves = [flamethrower, bodySlam, suckerPunch];
 function batalla(OffensivePokemon, DefensivePokemon) {
 
     let resultatD6 = d6;
@@ -89,7 +89,7 @@ function batalla(OffensivePokemon, DefensivePokemon) {
     }
 
     let resultatD3 = d3;
-    chosenMove = allMoves[resultatD3];
+    var chosenMove = allMoves[resultatD3];
     let residuo = chosenMove.effect(OffensivePokemon, DefensivePokemon);
     console.log(residuo);
 
