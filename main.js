@@ -57,7 +57,6 @@ allMoves = [flamethrower, bodySlam, suckerPunch];
 function batalla(OffensivePokemon, DefensivePokemon) {
 
     let resultatD6 = d6;
-    chosenPowerUp = allPowerUps[resultatD6] //Escollir el tipus de PowerUp que li toca al jugador
     console.log(chosenPowerUp);
     switch (chosenPowerUp.stat) {
         case "Hp":
