@@ -1,0 +1,5 @@
+    sigma: function sigma() {
+        const sigma = Math.sqrt(Math.pow((this.HP - this.promedio()), 2) + Math.pow((this.Atk - this.promedio()), 2) + Math.pow((this.Def - this.promedio()), 2) + Math.pow((this.SpA - this.promedio()), 2) + Math.pow((this.SpD - this.promedio()), 2) + Math.pow((this.Spe - this.promedio()), 2))
+
+        return sigma;
+    }
