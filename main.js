@@ -51,12 +51,22 @@ function d3() {
     }
     return number;
 }
+
+function d2() {
+    let number = getRandomInt(3);
+    if (number === 0) {
+        return number = d2();
+    }
+    return number;
+}
+
 // #endregion
-allPowerUps = [cottonGuard, swordsDance, doubleTeam, intimidate, ironDefense];
-allMoves = [flamethrower, bodySlam, suckerPunch];
+let allPowerUps = [cottonGuard, swordsDance, doubleTeam, intimidate, ironDefense];
+let allMoves = [flamethrower, bodySlam, suckerPunch];
 function batalla(OffensivePokemon, DefensivePokemon) {
 
     let resultatD6 = d6;
+    let chosenPowerUp = allPowerUps[resultatD6] 
     console.log(chosenPowerUp);
     switch (chosenPowerUp.stat) {
         case "Hp":
@@ -89,21 +99,45 @@ function batalla(OffensivePokemon, DefensivePokemon) {
     }
 
     let resultatD3 = d3;
-    chosenMove = allMoves[resultatD3];
+    let chosenMove = allMoves[resultatD3];
     let residuo = chosenMove.effect(OffensivePokemon, DefensivePokemon);
+    DefensivePokemon.HP -=  residuo;
     console.log(residuo);
 
 
 
 
 }
-batalla();
 
 function partida() {
+    let jugador1 = [megaCharizardX, megaMewtwoY, snom];
+    let jugador2 = [sunkern, greninjaAsh, megaMewtwoX];
+    let resultatD3Jugador1;
+    let resultatD3Jugador2;
+    let resultatD2;
+    
+    while ((megaCharizardX.HP <= 0 && megaMewtwoY.HP <= 0 && snom.HP <= 0) || (sunkern.HP <= 0 && greninjaAsh.HP <= 0 && megaMewtwoX.HP <= 0)) {
 
-    batalla(chosenOffensivePokemonFirstRound, chosenDefensivePokemonFirstRound);
+        resultatD3Jugador1 = d3;
+        resultatD3Jugador2 = d3;
+        resultatD2 = d2;
+        
+        if ((jugador1[resultatD3Jugador1] <= 0) && (jugador2[resultatD3Jugador2])) {
+
+            if (d2 === 1) {
+                batalla(jugador1[resultatD3Jugador1], jugador2[resultatD3Jugador2]);
+            } else {
+                batalla(jugador2[resultatD3Jugador1], jugador1[resultatD3Jugador2]);
+            }
+
+        }
+
+    }
+
 
 }
+
+partida();
 
 // #region Console logs
 
